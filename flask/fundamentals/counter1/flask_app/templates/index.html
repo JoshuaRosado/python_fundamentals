@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        #counter{
+            background-color: rgb(44, 114, 91);
+            color: blanchedalmond;
+            border-radius: 5px;
+            box-shadow: 3px 3px 3px 3px black;
+        }
+        #time{
+
+            color:rgb(44, 114, 91);
+            font-weight: 800;
+            text-decoration: underline;
+        }
+        #click{
+            background-color: rgb(44, 114, 91);
+            color: blanchedalmond;
+            
+        }
+        #reset{
+            background-color: blanchedalmond;
+            color: rgb(44, 114, 91);
+        }
+        #add{
+            background-color: rgb(44, 114, 91);
+            color: blanchedalmond;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="counter" class="text-center col-3 my-5 mx-auto">Counter</h1>
+    <p id="time" class="text-center col-3 my-5 mx-auto">{{session["count"]}} time(s)</p>
+    <div class="text-center col-2 flex justify evenly mx-auto">
+        <a id ="click" href="/" class="btn btn-primary">Click</a>
+        <a id ="reset" href="/reset" class="btn btn-danger">Reset</a>
+        <a id ="add" href="/add_two" class="btn btn-primary">+2</a>
+    </div>
+</body>
+</html>

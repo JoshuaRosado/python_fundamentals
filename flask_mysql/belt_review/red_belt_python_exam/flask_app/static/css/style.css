@@ -1,0 +1,174 @@
+#login{
+        background-color: rgb(25, 128, 160);
+        color:rgb(177, 240, 149);
+        border: 3px solid black;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: underline;
+        padding: 20px;
+}
+.log_reg{
+    font-weight: 700;
+    font-size: 60px;
+    margin: 20px;
+    margin-bottom: 80px;
+}
+.my_band{
+    background-color: rgb(157, 0, 131);
+border: 3px solid rgb(177, 240, 149);
+border-radius: 5px;
+color:aliceblue;
+padding: 5px;
+font-weight: bold;
+margin: 10pxs;
+
+}
+
+.b{
+    margin-left: 1000px;
+}
+.new_band{
+    background-color: rgb(157, 0, 131);
+border: 3px solid rgb(177, 240, 149);
+border-radius: 5px;
+color:aliceblue;
+padding: 5px;
+font-weight: bold;
+margin: 10px;
+
+}
+.error{
+    color: red;
+    font-size: 20px;
+    text-align: center;
+}
+#band_table{
+    color: aliceblue;
+    font-size: 25px;
+    font-weight: 700;
+}
+#table{
+    color: rgb(177, 240, 149);
+    text-align: start;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+.div-home{
+    text-align: center;
+}
+#home_container{
+    background-color: rgb(25, 128, 160);
+    color:rgb(177, 240, 149);
+    border: 3px solid black;
+    border-radius: 5px;
+    text-decoration: underline;
+    padding: 20px;
+    height: 1000px;
+    font-size: 20px;
+}
+
+
+.home_title{
+    text-align: left;
+
+}
+.add_band_page, .edit_band_container{
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(25, 128, 160);
+    color: rgb(177, 240, 149);
+    border-radius: 5px;
+    height: 1000px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+
+
+
+
+}
+
+.add_band_container, .edit_container{
+    text-align: start;
+    width: 800px;
+    padding: 20px;
+    margin: 20px;
+    height: 1000px;
+
+}
+#answer{
+    color: aliceblue;
+
+}
+
+.flex-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content:space-around;
+        margin: 0 auto;
+        height: 800px;
+}
+.btn_location{
+
+    text-align: end;
+    margin-right: -500px;
+}
+.b_location{
+    text-align: end;
+    margin-right: -500px;
+}
+
+.btn,.dashboard_btn,#dashboard_btn,.edit, .delete, .add_btn,#logout_btn, .logout_btn, .add_band_btn, .out_btn {
+
+background-color: rgb(157, 0, 131);
+border: 3px solid rgb(177, 240, 149);
+border-radius: 5px;
+color:aliceblue;
+padding: 5px;
+font-weight: bold;
+margin: 10px;
+
+}
+#rock_on{
+    font-size: 60px;
+}
+#purchase_btn{
+    background-color: rgb(157, 0, 131);
+    border: 5px solid rgb(177, 240, 149);
+    border-radius: 10px;
+    color:rgb(255, 255, 255);
+    padding: 5px;
+    font-weight: bold;
+    margin: -10px;
+
+}
+
+.detail_table{
+
+    align-items: center;
+    font-size: 30px;
+
+}
+
+.detail_container{
+    display: flex;
+    align-items: flex-start;
+    margin: 0 auto;
+    height: 100px;
+}
+
+.td{
+    color: aliceblue;
+}
+#edit_title{
+    font-size: 45px;
+    text-decoration: underline;
+}
+
+
+

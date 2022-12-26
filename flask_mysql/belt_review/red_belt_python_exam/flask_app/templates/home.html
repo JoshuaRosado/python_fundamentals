@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="div-home" id="home_container">
+        <div class="home-container">
+            <h1 class="majority-width" id="rock_on">Rock On {{user.first_name}} {{user.last_name}}!!</h1>
+            <div class="b">
+                {% for band in bands: %}
+                {% if band.user.id == user.id: %}
+                <a href="/bands/my_bands/{{band.id}}"  class="my_band" value="band" name="band">My Bands</a>
+                {%endif%}
+                {%endfor%}
+                <a href="/bands/new" class="new_band">New Band</a>
+                <a href="/logout" class="out_btn">Log Out</a>
+            </div>
+        </div>
+
+        <h2 class="home_title">All Bands</h2>
+        <div class="table">
+            <table class="table table-striped" id="band_table">
+                <thead>
+                    <tr>
+                        <th>Band Name</th>
+                        <th>Founding Member</th>
+                        <th>Genre</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    {% for band in bands: %}
+                    <tr>
+                        <td>{{band.band_name}}</td>
+                        <td>{{band.user.first_name}} {{band.user.last_name}}</td>
+                        <td>{{band.music_genre}}</td>
+                        <td>
+                            {% if band.user.id == user.id: %}
+                            <a class="edit" href="/bands/edit/{{band.id}}">edit</a>
+                            <a class="delete" href="/bands/delete/{{band.id}}">delete</a>
+                            {% endif %}
+
+                            
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{name}}</h1>
+    <h1>{{num}}</h1>
+    {% for i in range(0, num)%}
+    <p>Hello{{name}}!</p>
+    {%endfor%}
+
+    {% if name == "joshua"%}
+    <p>The name is Bond, Joshua Bond!</p>
+    {%endif%}
+
+
+</body>
+</html>
+

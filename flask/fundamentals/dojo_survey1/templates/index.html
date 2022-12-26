@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<style>
+    body{
+        text-align: center;
+    }
+    *{
+        text-align:left ;
+        margin: 10px;
+    }
+    #form{
+        width: 600px;
+        color: white;
+        display: flex;
+        display: inline-block;
+        border: 4px solid black;
+        background-color: darkslategrey;
+        border-radius: 10px;
+        font-size: large;
+    }
+    select{
+        min-height: 100px;
+        min-width: 100px;
+    }
+    #dojo{
+        color: yellowgreen;
+        text-decoration: underline;
+        font-weight: 800;
+        font-size: 60px;
+        font-family: cursive;
+
+    }
+    #submit{
+        background-color: yellowgreen;
+        color: aliceblue;
+        border: 1px solid black;
+        box-shadow: 2px 2px 2px 2px black;
+        position: relative;
+        left: 240px;
+        position: relative;
+        bottom: 20px;
+    }
+    
+</style>
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <form action="/process" method="post" class=" col-2 my-5 mx-auto" id="form">
+        <h1 class=" col-9 my-5 mx-auto" id="dojo">Dojo Survey</h1>
+        <div class="form-group col-9 my-5 mx-auto" id="name">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name">
+        </div>
+        <div class="from-group col-9 my-3 mx-auto" id="location">
+            <label for="location">Dojo Location:</label>
+            <select name="location" class="form-group" id="location">
+                <option value="">---SELECT ONE---</option>
+                <option value="location">Ozaka</option>
+                <option value="location">Bali</option>
+                <option value="location">American Samoa</option>
+                <option value="location">Mentawai</option>
+            </select>
+        </div>
+        <div class="form-group col-9 my-3 mx-auto" id="language">
+            <label for="language">Favorite Language:</label>
+            <select name="language" class="form-group id="language">
+                <option value="">---SELECT ONE---</option>
+                <option value="language">Python</option>
+                <option value="language">Java</option>
+                <option value="language">React</option>
+                <option value="language">JavaScript</option>
+            </select>
+        </div>
+        <div class="form-group col-9 my-4 mx-auto" id="comment">
+        <label for="comment">Comment (Optional)</label><br>
+            <textarea name="comment" cols="40" rows="8"></textarea>
+        </div>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+</body>
+</html>

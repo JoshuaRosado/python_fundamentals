@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Results</title>
+</head>
+
+<body>
+    <div class="container" id="home_container">
+        <div>
+            <h1 class="arbortrary">Arbortrary</h1>
+            <p class="site_track">A site to track randomly planted trees</p>
+        </div>
+
+        <div class="flex-container">
+            <h1 class="majority-width" id="welcome">Welcome {{user.first_name}} {{user.last_name}}</h1>
+            <div>
+                <a href="/trees/create" class="plant_btn">Plant a Tree!</a>
+                <a href="/logout" class="logout_btn">Log Out</a>
+            </div>
+        </div>
+
+        <h2 class="trees_planted">Trees planted by users:</h2>
+        <div class="container">
+            <table class="table table-striped">
+                <thead>
+
+                    <tr>
+                        <th>Species</th>
+                        <th>Planted By</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    {% for tree in trees: %}
+                    <tr>
+                        <td>{{tree.tree_species}}</td>
+                        <td>{{tree.user.first_name}}</td>
+
+                        <td>
+                            <a href="/trees/{{tree.id}}">details</a>
+
+                            {% if tree.user.id == user.id: %}
+                            <a href="/trees/edit/{{tree.id}}">edit</a>
+                            <a href="/trees/delete/{{tree.id}}">delete</a>
+                            {% endif %}
+                            
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

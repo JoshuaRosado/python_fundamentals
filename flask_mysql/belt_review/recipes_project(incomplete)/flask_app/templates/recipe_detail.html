@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Recipe Details</title>
+</head>
+
+<body>
+    <div class="container grey">
+
+        <div class="flex-container">
+            <h1 class="majority-width">Welcome {{user.first_name}} {{user.last_name}}</h1>
+            <div>
+                <a href="/recipes/home">Dashboard</a>
+                <a href="/logout">Log Out</a>
+            </div>
+        </div>
+
+        <h2>{{recipe.name}}</h2>
+        <div class="container with-border white">
+        <div class="flex-container">
+            <p >Description:</p>
+            <p class="majority-width">{{recipe.description}}</p>
+        </div>
+        <div class="flex-container">
+            <p >Under 30 min:</p>
+            <p class="majority-width">
+                {% if recipe.under_30 == True: %}
+                    Yes
+                {% else: %}
+                    No
+                {% endif %}
+            </p>
+        </div>
+        <div class="flex-container">
+            <p >Instructions:</p>
+            <p class="majority-width"> {{recipe.instructions}}</p>
+        </div>
+        <div class="flex-container">
+            <p >Date Made:</p>
+            <p class="majority-width">{{recipe.date_made}}</p>
+        </div>
+        <div class="flex-container">
+            <p>Made by:</p>
+            <p class="majority-width">{{recipe.user.first_name}}</p>
+        </div>
+
+        </div>
+    </div
+
+</body>
+
+</html>

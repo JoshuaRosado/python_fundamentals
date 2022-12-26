@@ -1,0 +1,43 @@
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-around;
+    margin: 0 auto;
+}
+.container {
+    margin: 5%;
+    padding: 2%;
+}
+.form-group{
+    margin-bottom: 15px;
+}
+
+.with-border {
+    border: 2px solid black;
+}
+.white {
+    background-color: white;
+}
+.grey {
+    background-color: rgb(182, 182, 182);
+}
+
+.with-margins {
+    margin: 20px;
+}
+.with-padding {
+    padding: 20px;
+}
+.half-width {
+    width: 48%;
+}
+.majority-width {
+    width: 80%;
+}
+.flex-container {
+    display: flex;
+}
+.error {
+    color: red;
+    text-align: center;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Edit User</title>
+    <style>
+        .form-group{
+            width: 700px;
+            min-height: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/user/update" method="post" class="col-6 mx-auto">
+        <h2 class="text-center">Edit {{user.first_name}}</h2>
+        <input type="hidden" name="id"  value={{user.id}}>
+        <div class="form-group">
+            <label for="first_name"> First Name:</label>
+            <input type="text" name="first_name" class="form-group" value="{{user.first_name}}">
+        <div class="form-group">
+            <label for="last_name"> Last Name:</label>
+            <input type="text" name="last_name" class="form-group" value="{{user.last_name}}">
+        </div>
+        <div class="form-group">
+            <label for="email"> Email:</label>
+            <input type="text" name="email" class="form-group" value="{{user.email}}">
+        </div>
+        <input type="submit" value="Update User" class="btn btn-success">
+    </form>
+    
+</body>
+</html

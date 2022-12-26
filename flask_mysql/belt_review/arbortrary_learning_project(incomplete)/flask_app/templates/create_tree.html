@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Tree</title>
+</head>
+
+<body>
+    <div class="plant_tree_container">
+        <div>
+            <h1 class="arbortrary">Arbortrary</h1>
+            <p class="site_track">A site to track randomly planted trees</p>
+        </div>
+
+        <div class="flex-container">
+            <h1 id="plant_title" class="majority-width">Plant a Tree</h1>
+            <div>
+                <a class="plant_btn" href="/trees/home">Dashboard</a>
+                <a  class="plant_btn" href="/logout">Log Out</a>
+            </div>
+        </div>
+        <div>
+            {% with messages = get_flashed_messages() %}
+
+            {% if messages %}
+
+            {% for message in messages %}
+
+            <p class="error">{{message}}</p> 
+            {% endfor %}
+            {% endif %}
+
+            {% endwith %}
+        </div>
+
+        <form id="table" action="/trees" method="post" 
+            class="flex-container with-border majority-width">
+            <div class="half-width">
+                <div class="form-group">
+                    <label for="tree_species" class="form-label">Tree Specie</label>
+                    <input type="text" name="tree_species" class="form-control" id="tree_species" placeholder="tree_species">
+                </div>
+
+                <div class="form-group">
+                    <label for="location" class="form-label">Location</label>
+                    <textarea type="text" name="location" class="form-control" id="location"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="reason" class="form-label">Reason:</label>
+                    <textarea type="text" name="reason" class="form-control" id="reason" rows="5"></textarea>
+                </div>
+            </div>
+
+            <div class="half-width">
+                <div class="form-group">
+                    <label for="date_planted" class="form-label">Date Planted:</label>
+                    <input type="date" class="form-control" name="date_planted" id="date_planted">
+                </div>
+
+                <input type="hidden" name="user_id" value="{{session['user_id']}}">
+                <div class="form-group">
+                    <input type="submit"  class="plant_btn" value="Plant">
+                </div>
+            </div>
+        </form>
+
+
+
+    </div>
+
+</body>
+
+</html>

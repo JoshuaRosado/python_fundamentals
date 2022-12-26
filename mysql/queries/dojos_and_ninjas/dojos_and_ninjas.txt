@@ -1,0 +1,45 @@
+-- INSERT INTO dojos(name)
+-- VALUES ("Karate Dojo"),("Kung Fu Dojo"),("BJJ Dojo");
+
+-- SELECT * FROM dojos;
+
+--  SET SQL_SAFE_UPDATES = 0;
+-- DELETE FROM dojos;
+
+
+-- >>>>>>>OR<<<<<<<<<
+
+-- DELETE FROM dojos
+-- WHERE id = 1;
+
+--  DELETE FROM dojos
+-- WHERE id = 2;
+
+--  DELETE FROM dojos
+-- WHERE id = 3;
+
+-- SELECT * FROM dojos;
+
+-- INSERT INTO dojos(name)
+-- VALUES ("Greek Dojo"),("Japanese Dojo"),("Balinese Dojo");
+
+-- INSERT INTO ninjas(first_name,last_name,age,dojo_id)
+-- VALUES("Joshua", "Rosado", 28, 4), ("Alexis", "Rosado", 26, 4), ("Cataleya", "Rosado", 2, 4);
+
+-- INSERT INTO ninjas(first_name,last_name,age,dojo_id)
+-- VALUES("Jah", "Morant", 24, 5), ("Stephen", "Curry", 32, 5), ("Kevin", "Durant", 34, 5);
+
+-- INSERT INTO ninjas(first_name,last_name,age,dojo_id)
+-- VALUES("Will" ,"Smith", 50, 6),("Marlon", "Wayans", 45, 6),("Kevin Heart", 35, 6);
+
+-- SELECT * FROM dojos
+-- LEFT JOIN ninjas ON dojos.id = ninjas.dojo_id
+-- WHERE dojos.id = 4;
+
+-- SELECT * FROM dojos
+-- LEFT JOIN ninjas ON dojos.id = ninjas.dojo_id
+-- 	WHERE dojos.id = (SELECT id FROM dojos ORDER BY id DESC LIMIT 1);
+--     
+-- SELECT * FROM dojos
+-- WHERE dojos.id = (SELECT dojo_id FROM ninjas ORDER BY dojo_id DESC LIMIT 1);
+

@@ -1,0 +1,125 @@
+.flex-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content:space-around;
+    margin: 0 auto;
+}
+.log_reg{
+    font-size: 70px;
+    text-decoration: underline;
+    text-align: center;
+}
+#home_container{
+    background-color: bisque;
+    width: 1500px;
+    border-radius: 10px;
+    border: 2px solid rgb(98, 55, 0);
+    height: 800px;
+}
+
+#detail{
+    color: rgb(94, 157, 0);
+}
+
+.tree_name{
+    color: rgb(98, 55, 0);
+    margin: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+#welcome{
+    text-align:right;
+    position: relative;
+    right: -230px;
+    margin-top: -75px;
+    color: rgb(94, 157, 0);
+
+}
+#plant_title{
+    color: rgb(94, 157, 0);
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+}
+.arbortrary{
+    color: rgb(98, 55, 0);
+    margin: 10px;
+
+}
+.site_track{
+    color: rgb(98, 55, 0);
+    margin: 10px;
+}
+.trees_planted{
+    color: rgb(98, 55, 0)
+}
+
+.plant_tree_container{
+    background-color: bisque;
+    height: 1000px;
+    border-radius: 10px;
+    border: 3px solid rgb(98, 55, 0);
+
+}
+
+#table{
+    color: rgb(98, 55, 0);
+    font-size: larger;
+    font-weight: bold;
+}
+
+.btn, .plant_btn, .logout_btn{
+    background-color: rgb(94, 157, 0);
+    border: 3px solid rgb(98, 55, 0);
+    border-radius: 5px;
+    color: bisque;
+    padding: 5px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+#login{
+
+    background-color: bisque;
+    color: green;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+.container {
+    margin: 5%;
+    padding: 2%;
+}
+.form-group{
+    margin-bottom: 15px;
+}
+
+.with-border {
+    border: 2px solid black;
+}
+.white {
+    background-color: white;
+}
+.grey {
+    background-color: rgb(182, 182, 182);
+}
+
+.with-margins {
+    margin: 20px;
+}
+.with-padding {
+    padding: 20px;
+}
+.half-width {
+    width: 48%;
+}
+.majority-width {
+    width: 80%;
+}
+.flex-container {
+    display: flex;
+}
+.error {
+    color: red;
+    text-align: center;
+}
